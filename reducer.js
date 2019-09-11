@@ -9,8 +9,16 @@ const reducer = (state = globalState, action) => {
           username: action.value
         }
       }
-    // return Object.assign({},state,[state.login.username]:[action.value])
-    case 'RESET_ITEM':
+    case 'SET_DETAILS':
+    return {
+       ...state,
+       version:"89",
+       details:{
+         ...state.details,
+         firstname:action.firstname
+       }
+        
+    }
 
     default:
       return state;
