@@ -12,6 +12,4 @@ const globalState = {
     middlename:''
   }
 };
-
-
 export { globalState };
