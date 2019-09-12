@@ -1,15 +1,28 @@
-const globalState = {
+const FirstState = {
   id: '',
   name: '',
   version: '',
-  login:{
-    username:'React',
-    password:''
+  login: {
+    username: 'React',
+    password: ''
   },
-  details:{
-    firstname:'',
-    lastname:'',
-    middlename:''
+  details: {
+    firstname: '',
+    lastname: '',
+    middlename: ''
   }
 };
-export { globalState };
+
+const SecondState = {
+  projectDetails: {
+    isopen: false,
+  }
+}
+
+const global = {
+  FirstState,
+  SecondState
+}
+
+
+export { global };

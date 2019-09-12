@@ -1,7 +1,6 @@
-import { globalState } from './globalState';
-const reducer = (state = globalState, action) => {
+const sendDataReducer = (state, action) => {
   switch (action.type) {
-    case "SET_ITEM":
+    case "SET_ITEM": {
       return {
         ...state,
         login: {
@@ -9,20 +8,18 @@ const reducer = (state = globalState, action) => {
           username: action.value
         }
       }
-    case 'SET_DETAILS':
-    return {
-       ...state,
-       version:"89",
-       details:{
-         ...state.details,
-         firstname:action.firstname
-       }
-        
     }
-
+    case 'SET_DETAILS': {
+      console.log("enter");
+      return {
+        ...state,
+        id: "123",
+        details: { ...state.details, firstname: action.firstname }
+      }
+    }
     default:
       return state;
   }
 
 }
-export { reducer };
+export { sendDataReducer };

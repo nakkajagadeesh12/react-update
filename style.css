@@ -1,3 +1,26 @@
 h1, p {
   font-family: Lato;
 }
+button{
+    background: green;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+    animation: btntest linear 4s infinite
+}
+@keyframes btntest{
+  from{
+    background: green
+  }
+  to{
+      background:red
+  }
+}
+input{
+    border-radius: 5px;
+    padding: 10px;
+    font-size:20px
+    }

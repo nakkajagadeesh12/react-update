@@ -7,7 +7,7 @@ import {ViewComp}  from './ViewComp'
 
 const App = () => {
   return <div>
-    <h1>React Hooks</h1>
+    <marquee><h1>React Hooks</h1></marquee>
     <ViewComp/>
   </div>
 }
