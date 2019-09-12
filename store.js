@@ -11,6 +11,7 @@ const StoreProvider = (props) => {
   const value = useMemo(() => {
     return { state, dispatch };
   }, [state]);
+  console.log("State-->",state);
   return (<Store.Provider value={value}> {props.children}</Store.Provider >)
 }
 export { Store, StoreProvider };
