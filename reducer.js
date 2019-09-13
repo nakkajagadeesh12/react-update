@@ -1,4 +1,6 @@
-const sendDataReducer = (state, action) => {
+import {global} from './globalState';
+
+const sendDataReducer = (state = global.FirstState, action) => {
   switch (action.type) {
     case "SET_ITEM": {
       return {
@@ -19,17 +21,19 @@ const sendDataReducer = (state, action) => {
     case 'DAMMUNTE_UPDATE_CHEY':
       return {
         ...state,
-        ...state.TestLoop,
-        TestLoop1: {
-          ...state.TestLoop1.TestLoop2,
-          TestLoop2: {
-            ...state.TestLoop1.TestLoop2.TestLoop3, TestLoop3: {
-              ...state.TestLoop1.TestLoop2.TestLoop3.TestLoop4, TestLoop4: {
-                DammunteUpdateChey: "Chesa ra chdu"
-              }
-            }
+        TestLoop: {
+          ...state.TestLoop,
+          TestLoop1: {
+            ...state.TestLoop1,
+            Test: `${Math.floor(Math.random() * 100)}`,
           }
-        }
+        },
+        // ...state.TestLoop,
+        // TestLoop1: {
+        //   ...state.TestLoop1.TestLoop2, TestLoop2: {
+        //     baba: "Hihihihihh"
+        //   }
+        // }
       }
     default:
       return state;

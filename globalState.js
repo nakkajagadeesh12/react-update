@@ -13,15 +13,17 @@ const FirstState = {
   },
   TestLoop: {
     TestLoop1: {
-      TestLoop2: {
-        TestLoop3: {
-          TestLoop4: {
-            DammunteUpdateChey: ''
-          }
-        }
-      }
+      Test: "HIH"
     }
-  }
+  },
+  loop: [
+    {
+      name: "jagan"
+    },
+    {
+      name: "lakshmi"
+    }
+  ]
 };
 
 const SecondState = {

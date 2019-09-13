@@ -1,4 +1,6 @@
-const componentReducer = (state, action) => {
+import { global } from './globalState';
+
+const componentReducer = (state = global.SecondState, action) => {
   switch (action.type) {
     // case "SET_COMPONENT_ITEM":
     //   return state;

@@ -8,10 +8,11 @@ const Store = createContext();
 
 const StoreProvider = (props) => {
   const [state, dispatch] = useReducer(rootReducer, global);
+  console.log(global,"global");
   const value = useMemo(() => {
     return { state, dispatch };
   }, [state]);
-  console.log("State-->",state);
+  console.log("State-->", state);
   return (<Store.Provider value={value}> {props.children}</Store.Provider >)
 }
 export { Store, StoreProvider };
