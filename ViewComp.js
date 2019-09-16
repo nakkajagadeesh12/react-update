@@ -3,7 +3,8 @@ import { useContext, useState } from 'react';
 import React from 'react';
 import { SendAction } from './Actions';
 import Display from './display';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
+import './style.css';
 
 const ViewComp = () => {
   const { state, dispatch } = useContext(Store);
@@ -13,8 +14,8 @@ const ViewComp = () => {
     <h1>FirstName:<input type='text' value={FirstName} onChange={(e) => {
       setFirstName(FirstName = e.target.value);
     }} /></h1>
-    <lable>CheckBox</lable>
-    <input type='checkbox'/>
+
+    <input type='checkbox' id="check" /><label for="check">CheckBox</label>
     <button onClick={() => SendAction(dispatch, FirstName)}>Send Details</button>
 
     <button onClick={() => {
