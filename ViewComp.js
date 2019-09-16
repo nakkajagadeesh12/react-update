@@ -13,6 +13,8 @@ const ViewComp = () => {
     <h1>FirstName:<input type='text' value={FirstName} onChange={(e) => {
       setFirstName(FirstName = e.target.value);
     }} /></h1>
+    <lable>CheckBox</lable>
+    <input type='checkbox'/>
     <button onClick={() => SendAction(dispatch, FirstName)}>Send Details</button>
 
     <button onClick={() => {
